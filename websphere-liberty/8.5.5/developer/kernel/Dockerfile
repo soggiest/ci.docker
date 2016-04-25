@@ -12,12 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM ubuntu:14.04
+FROM rhel7:latest
 
-MAINTAINER Kavitha Suresh Kumar <kavisuresh@in.ibm.com> (@kavi2002suresh)
+#MAINTAINER Kavitha Suresh Kumar <kavisuresh@in.ibm.com> (@kavi2002suresh)
 
-RUN apt-get update \
-    && apt-get install -y wget unzip \
+RUN yum -y update \
+    && yum install -y wget unzip \
     && rm -rf /var/lib/apt/lists/*
 
 # Install JRE
